@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:dist/assets/css",
+    "sass:watch": "sass --watch src/scss:dist/assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chocopie-j/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chocopie-j/portfolio/issues"
+  },
+  "homepage": "https://github.com/chocopie-j/portfolio#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.94.2"
+  }
+}
