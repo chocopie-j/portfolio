@@ -7,9 +7,9 @@
     "build:assets": "copyfiles -u 1 src/assets/** dist/assets",
     "build:sass": "sass src/scss:dist/assets/css",
     "build": "npm-run-all build:* copy:docs",
-
     "copy:docs": "copyfiles -u 1 dist/** docs",
-
+    "watch:html": "chokidar \"src/**/*.html\" -c \"npm run build:html\"",
+    "watch:assets": "chokidar \"src/assets/**\" -c \"npm run build:assets\"",
     "watch:sass": "sass --watch src/scss:dist/assets/css",
     "serve": "live-server dist",
     "dev": "npm-run-all --parallel watch:sass serve"
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/chocopie-j/portfolio#readme",
   "description": "",
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
     "copyfiles": "^2.4.1",
     "live-server": "^1.2.2",
     "npm-run-all": "^4.1.5",
