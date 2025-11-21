@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+docs/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / Editor stuff
+.DS_Store
+Thumbs.db
+
+# VSCode config backups
+.vscode/
