@@ -6,14 +6,16 @@
     "build:html": "copyfiles -u 1 src/*.html dist",
     "build:sass": "sass src/assets/scss:dist/assets/css",
     "build:images": "copyfiles -u 2 src/assets/images/** dist/assets",
+    "build:js": "copyfiles -u 2 src/assets/js/** dist/assets",
     "copy:docs": "copyfiles -u 1 dist/**/* docs",
-    "build": "npm-run-all build:html build:sass build:images copy:docs",
+    "build": "npm-run-all build:html build:sass build:images build:js copy:docs",
 
     "watch:html": "chokidar \"src/**/*.html\" -c \"npm run build:html\"",
     "watch:images": "chokidar \"src/assets/images/**\" -c \"npm run build:images\"",
+    "watch:js": "chokidar \"src/assets/js/**\" -c \"npm run build:js\"",
     "watch:sass": "sass --watch src/assets/scss:dist/assets/css",
     "serve": "live-server dist",
-    "dev": "npm-run-all --parallel watch:html watch:images watch:sass serve"
+    "dev": "npm-run-all --parallel watch:html watch:images watch:js watch:sass serve"
   },
   "repository": {
     "type": "git",
