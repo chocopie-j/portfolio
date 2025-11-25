@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -157,8 +158,198 @@ select:focus {
   border: 1px solid #558ab7 !important;
 }
 
-.main-wrap {
-  padding: 40px 20px;
+/**************************************************
+	Variables (공통색상 지정)
+**************************************************/
+:root {
+  color-scheme: light dark;
+}
+
+/**************************************************
+	Public
+**************************************************/
+html {
+  min-width: 1300px;
+  overflow-x: hidden;
+}
+
+body[data-theme=light-mode] {
+  --background-color: #ffffff;
+  --point-color: #f7f7f7;
+  --text-color: #1b1b1b;
+  --button-color: #ffe97d;
+}
+
+body[data-theme=dark-mode] {
+  --background-color: #1b1b1b;
+  --point-color: #111111;
+  --text-color: #f7f7f7;
+  --button-color: #ffe97d;
+}
+
+body {
+  position: relative;
+  padding-bottom: 50px;
+  font-family: "Pretendard", sans-serif;
+  background: var(--background-color);
+}
+
+@font-face {
+  font-family: "DepartureMono";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2409-1@1.0/DepartureMono-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/**************************************************
+	Layout
+**************************************************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  max-width: 400px;
+  height: 100%;
+  background: var(--point-color);
+  text-align: center;
+  z-index: 999;
+}
+header h1 {
+  font-family: "DepartureMono";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--text-color);
+  text-align: center;
+}
+header .logo {
+  display: inline-block;
+  max-width: 100px;
+  margin: 30px 0 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+header .logo img {
+  max-width: 100%;
+}
+header p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+  word-break: keep-all;
+}
+header ul {
+  margin-top: 25px;
+}
+header ul li {
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+header .btns {
+  margin-top: 25px;
+  font-size: 0;
+}
+header .btns button {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 3px;
+  font-family: "DepartureMono";
+  font-weight: 400;
+  font-size: 12px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 400px;
+  text-align: center;
+}
+footer .copyright {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 40px;
+  color: var(--text-color);
+  opacity: 0.25;
+}
+
+#mainWrap {
+  padding: 50px 60px;
+  padding-left: 460px;
+}
+#mainWrap section ul {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: start;
+  height: 2200px;
+  max-height: 2200px;
+  margin: -20px -10px;
+  overflow: hidden;
+}
+#mainWrap section ul li {
+  position: relative;
+  display: inline-block;
+  break-inside: avoid;
+  width: calc(25% - 20px);
+  margin: 20px 10px;
+}
+#mainWrap section ul li button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: none;
+  border: 0;
+}
+#mainWrap section ul li figure {
+  background: rgba(0, 0, 0, 0.05);
+  margin: 0;
+  backdrop-filter: blur(4px);
+}
+#mainWrap section ul li img {
+  width: 100%;
+}
+#mainWrap section ul li .wa {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 10px;
+  background: #00b906;
+  color: #fff;
+  border-radius: 3px;
+}
+#mainWrap section ul li .info {
+  margin-top: 20px;
+  padding: 0 5px;
+}
+#mainWrap section ul li .info p {
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+#mainWrap section ul li .info span {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-color);
+  opacity: 0.3;
 }
 
 /*# sourceMappingURL=style.css.map */
