@@ -1,0 +1,153 @@
+
+/**************************************************
+	Public
+**************************************************/
+html{
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+}
+header{
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+}
+/**************************************************
+	Layout
+**************************************************/
+@media screen and (max-width: 1300px){
+
+  html {
+    min-width: 320px
+  }
+
+  header {
+    max-width: 200px;
+    .inner {
+      padding: 0 15px; 
+      box-sizing: border-box
+    }
+    h1 {
+      font-size: 20px; 
+      line-height: 30px
+    }
+    .logo {
+      margin: 15px 0 25px; 
+      max-width: 70px
+    }
+    p {
+      font-size: 14px; 
+      line-height: 21px
+    }
+    ul {
+      margin-top: 15px;
+      li {
+        font-size: 12px; 
+        line-height: 18px
+      }
+    }
+    .btns {
+      margin-top: 20px;
+      button {
+        margin: 0 2px; 
+        padding: 5px 8px; 
+        font-size: 10px
+      }
+    } 
+  }
+
+  footer {
+    padding-left: 200px;
+    .copyright {
+      font-size: 10px; 
+      line-height: 30px
+    }
+  }
+
+  #mainWrap {
+    padding: 25px 30px; 
+    padding-left: 230px;
+    section {
+      ul {
+        margin: -10px -5px;
+        li {
+          width: calc(100% / 3 - 10px); 
+          margin: 10px 5px
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+
+  header {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto;
+    .inner {
+      position: relative; 
+      width: 100%; 
+      height: 60px; 
+      box-sizing: border-box;
+    }
+    h1 {
+      position: absolute; 
+      top: 0; 
+      left: 60px; 
+      font-size: 17px; 
+      line-height: 60px
+    }
+    .logo {
+      position: absolute; 
+      top: 15px; 
+      left: 20px; 
+      width: 30px; 
+      margin: 0; 
+      border: 0
+    }
+    .btns {
+      position: absolute; 
+      top: 18px; 
+      right: 20px; 
+      margin: 0;
+      button {
+        padding: 5px; 
+        margin: 0; 
+        margin-left: 5px
+      }
+    }
+    p,
+    ul {
+      display: none;
+    }
+  }
+
+  footer {
+    padding-left: 0
+  }
+
+  #mainWrap {
+    padding: 20px; 
+    padding-top: 90px;
+    section {
+      ul {
+        li {
+          width: calc(50% - 10px);
+          .info {
+            margin-top: 15px;
+            p {
+              margin-bottom: 3px; 
+              font-size: 14px; 
+              line-height: 22px
+            }
+            span {
+              font-size: 11px; 
+              line-height: 17px
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
