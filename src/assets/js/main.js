@@ -1,3 +1,26 @@
+//디바이스 체크
+getdevice = function(){
+	if($('#_device_pc').css('display')=='block'){
+		return 'pc';
+	}else if($('#_device_ta').css('display')=='block'){
+		return 'ta';
+	}else if($('#_device_mo').css('display')=='block'){
+		return 'mo';
+	}else{
+		return null;
+	}
+}
+
+//전역변수 선언
+VARS = {
+	'ani' : {
+		'speed' : 600,
+		'easing' : 'easeInOutExpo'
+	}
+}
+
+
+
 function darkMode() {
   const root = document.body;
   root.dataset.theme = 'dark-mode';
