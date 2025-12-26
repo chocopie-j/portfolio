@@ -1,10 +1,10 @@
 //디바이스 체크
 getdevice = function(){
-	if($('#_device_pc').css('display')=='block'){
+	if($('#_devicePc').css('display')=='block'){
 		return 'pc';
-	}else if($('#_device_ta').css('display')=='block'){
+	}else if($('#_deviceTa').css('display')=='block'){
 		return 'ta';
-	}else if($('#_device_mo').css('display')=='block'){
+	}else if($('#_deviceMo').css('display')=='block'){
 		return 'mo';
 	}else{
 		return null;
