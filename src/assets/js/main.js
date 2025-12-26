@@ -19,7 +19,14 @@ VARS = {
 	}
 }
 
-
+$(function() {
+	var clipboard = new ClipboardJS('.clipBtn', {
+		text: function (obj) {
+			alert("클립보드에 복사되었습니다");
+			return obj.getAttribute("link");
+		},
+	});
+});
 
 function darkMode() {
   const root = document.body;
